@@ -6,7 +6,7 @@ class Telefon:
         self.brend = brand
 
     def Kiritish(self):
-        return f"Nomi -->{self.nomi}, Ram --> {self.ram}, Narxi --> {self.narx}, Brendi --> {self.brend}"
+        return f"\nNomi -->{self.nomi}\nRam --> {self.ram}\nNarxi --> {self.narx}\nBrendi --> {self.brend}\n"
     
     def ram_filter(self):
         return 2 < self.ram < 8
