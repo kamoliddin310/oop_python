@@ -1,7 +1,7 @@
 from pprint import pprint
 
 class Dukon:
-    def __init__(self, Dukon_nomi: str, manzil: str, Mahsulot: str, Ish_vaqti: str):
+    def __init__(self, Dukon_nomi: str, manzil, Mahsulot, Ish_vaqti):
         self.dukon_nomi = Dukon_nomi
         self.manzil = manzil
         self.mahsulot = Mahsulot
@@ -18,4 +18,6 @@ dokon5 = Dukon("Do'kon E", "Namangan, Davlatobod", "Kanzelyariya buyumlari", "08
 dokon6 = Dukon("Do'kon F", "Buxoro, Nodir Devonbegi", "Elektronika", "10:00 - 19:00")
 
 d = [dokon1, dokon2, dokon3, dokon4, dokon5, dokon6]
-pprint(list(map(lambda i: i.get_info(), filter(lambda i: i.mahsulot == "Elektronika", d))))
+pprint(list(map(lambda i: i.get_info(), \
+                filter(lambda i: i.mahsulot == "Elektronika", d))))
+
