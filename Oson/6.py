@@ -23,4 +23,5 @@ A = [
     Avtomobil("Ford", "Focus", 2005, 5000)
 ]
 
-pprint(list(map (lambda i: i.malumot(), filter(lambda i: i.yili >= 2010, A ))))
+pprint(list(map (lambda i: i.malumot(),\
+        filter(lambda i: i.yili >= 2010, A ))))
