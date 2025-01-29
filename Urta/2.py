@@ -1,19 +1,25 @@
 class Restarn:
-    def __init__(self, name: str) -> None:
-        self.name = name
+    menu = []
         
-    def get_info(self):
-        return f"{self.name} --> menyusi:"
+    def get_menu(self):
+        return self.menu 
+    
+    def add_menu(self, food: dict):
+        self.menu.append(food)
     
 class FastfFood(Restarn):
-    def __init__(self, ism):
-        self.ism = ism
-    
-    def get_in(self):
-        return f"{self.ism} --> menyusi"
-    
-a = Restarn("Almaz")
-b = FastfFood("Milaris")
+    def menu_print(self):
+        print("Menu:")
+        for n, food in enumerate(self.menu, start=1):
+            print(f"{n}. {food["name"]} - {food["price"]}")
 
-print(a.get_info())
-print(b.get_in())
+class FineDining(Restarn):
+     pass
+    
+a = FastfFood()
+b = FineDining()
+
+a.add_menu({'name': "Hotdog", "price": 15000})
+a.add_menu({'name': "Shaurma", "price": 25000})
+
+a.menu_print()
